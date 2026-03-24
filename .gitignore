@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Environment
+.env
+backend/.env
+frontend/.env
+.venv/
+venv/
+env/
+*.env
+
+# Build outputs
+dist/
+frontend/dist/
+build/
+*.pyc
+__pycache__/
+
+# User Uploaded Content (Don't push these!)
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/outputs/*
+!backend/outputs/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Debug/Temp scripts (that were missed)
+backend/debug-*
+backend/test-*
+backend/check-*
+backend/cleanup-*
+
+# AI System Outputs/Feedback
+backend/snag-detection-system/output_*.jpg
+backend/snag-detection-system/feedback_images/
+backend/snag-detection-system/feedback.json
+backend/email_draft.txt
+backend/inspection_report.txt
