@@ -26,6 +26,8 @@ const ALLOWED_ORIGINS = [
     'https://snag-project.vercel.app',
     'http://localhost:5173',
     'http://localhost:5174',
+    'https://ai-snag-detection.vercel.app/login',
+    'https://ai-snag-detection.vercel.app',
     process.env.CLIENT_URL
 ].filter(Boolean);
 

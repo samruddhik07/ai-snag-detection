@@ -27,6 +27,7 @@ const connectDB = async () => {
     client.release();
     await createTables();
   } catch (error) {
+    console.log(process.env.DATABASE_URL);
     console.error('❌ PostgreSQL connection failed:', error.message);
     process.exit(1);
   }
