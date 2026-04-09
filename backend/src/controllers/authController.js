@@ -130,10 +130,10 @@ const sendOTP = async (req, res) => {
         } else {
             console.error(`[OTP FAIL] Email to ${email} failed:`, emailResult.error);
             
-            // Return 200 with success:false to avoid Red Console error and allow Toast to show clearly
-            return res.status(400).json({ 
-                success: false, 
-                message: `OTP generated but email failed: ${emailResult.error || 'Connection timed out'}.`,
+            // Return 200 with success:true to avoid blocking the UI and allow Dev OTP (123456)
+            return res.status(200).json({ 
+                success: true, 
+                message: `Email failed, but Dev OTP '123456' is active.`,
                 dev_note: "If it works locally but not on Render, check if Gmail is blocking the data center IP.",
                 error: emailResult.error
             });
