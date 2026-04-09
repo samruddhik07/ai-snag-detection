@@ -37,13 +37,13 @@ API.interceptors.response.use(
 // };
 
 export const authAPI = {
-    login: (data) => API.post('/api/auth/login', data),
-    register: (data) => API.post('/api/auth/register', data),
-    getProfile: () => API.get('/api/auth/profile'),
-    getContractors: () => API.get('/api/auth/contractors'),
-    sendOTP: (phone, email) => API.post('/api/auth/send-otp', { phone, email }),
-    verifyOTP: (phone, otp) => API.post('/api/auth/verify-otp', { phone, otp }),
-    updateProfile: (data) => API.post('/api/auth/update-profile', data),
+    login: (data) => API.post('/auth/login', data),
+    register: (data) => API.post('/auth/register', data),
+    getProfile: () => API.get('/auth/profile'),
+    getContractors: () => API.get('/auth/contractors'),
+    sendOTP: (phone, email) => API.post('/auth/send-otp', { phone, email }),
+    verifyOTP: (phone, otp) => API.post('/auth/verify-otp', { phone, otp }),
+    updateProfile: (data) => API.post('/auth/update-profile', data),
 };
 // ── Projects ──────────────────────────────────────────────────
 export const projectAPI = {
